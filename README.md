@@ -13,7 +13,7 @@ A clean, responsive, and feature-rich Todo & Goal Tracker web application built 
 - **⚡ Daily Task Strength Bar**: Real-time momentum meter tracking today's progress from 0% to 100% with dynamic motivational encouragement.
 - **📋 Sub-tasks / Action Steps**: Break down complex goals into bite-sized steps right on the task card or edit dialog.
 - **⏰ Expiration / Due Dates**: Set target dates and times with automatic smart badges for *Upcoming*, *Due Today*, and *Overdue*.
-- **☀️ Day & 🌙 Dark Mode**: Beautiful light and dark themes with persistent user preference.
+- **☀️ Light & 🌙 Dark Mode**: Beautiful light and dark themes with persistent user preference.
 - **👋 Personalized Welcome**: Smart greeting banner that recognizes returning users and lets you set a custom name.
 - **🎉 Achievement Celebrations**: Displays *"You crushed it. Well-done!"* on all completed tasks along with a celebratory toast notification.
 - **🔍 Real-Time Search & Filtering**: Instant search across tasks, goals, and sub-tasks, plus filter tabs for *All*, *Not Achieved*, and *Achieved*.
@@ -53,3 +53,4 @@ No build tools or installation needed! Simply open `index.html` in any modern we
 ## 📄 License
 
 This project is open source and available under the [MIT License](LICENSE).
+

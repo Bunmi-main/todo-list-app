@@ -1,6 +1,6 @@
 /**
  * Simple Todo App with Task, Goal, Due Date, Sub-tasks, Daily Strength Bar,
- * Day/Dark Mode, and Achieved Celebration Note.
+ * Light/Dark Mode, and Achieved Celebration Note.
  * Persists data locally in browser via localStorage.
  */
 
@@ -142,7 +142,7 @@ function init() {
 }
 
 /**
- * Initialize Day/Dark Theme
+ * Initialize Light/Dark Theme
  */
 function initTheme() {
   try {
@@ -172,8 +172,8 @@ function applyTheme(theme) {
 
   if (theme === 'dark') {
     themeIcon.textContent = '☀️';
-    themeText.textContent = 'Day';
-    themeToggleBtn.setAttribute('title', 'Switch to Day (Light) mode');
+    themeText.textContent = 'Light';
+    themeToggleBtn.setAttribute('title', 'Switch to Light mode');
   } else {
     themeIcon.textContent = '🌙';
     themeText.textContent = 'Dark';
@@ -182,7 +182,7 @@ function applyTheme(theme) {
 }
 
 /**
- * Toggle between Day and Dark mode
+ * Toggle between Light and Dark mode
  */
 function toggleTheme() {
   const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
