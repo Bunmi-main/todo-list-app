@@ -1277,48 +1277,6 @@ select:focus {
   text-align: center;
 }
 
-/* Floating Celebration Toast */
-.toast {
-  position: fixed;
-  bottom: 2rem;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #0f172a;
-  color: #ffffff;
-  border: 1px solid #334155;
-  padding: 0.75rem 1.35rem;
-  border-radius: var(--radius-full);
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
-  z-index: 9999;
-  font-weight: 600;
-  font-size: 0.925rem;
-  animation: toast-in 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-[data-theme="dark"] .toast {
-  background-color: #1e293b;
-  border-color: #475569;
-  color: #f8fafc;
-}
-
-.toast-icon {
-  font-size: 1.2rem;
-}
-
-@keyframes toast-in {
-  from {
-    opacity: 0;
-    transform: translate(-50%, 15px);
-  }
-  to {
-    opacity: 1;
-    transform: translate(-50%, 0);
-  }
-}
-
 /* Animations for dialog */
 dialog[open] {
   animation: modal-appear 0.2s cubic-bezier(0.16, 1, 0.3, 1);

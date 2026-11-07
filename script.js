@@ -124,11 +124,6 @@ const nameInput = document.getElementById('name-input');
 const closeNameModalBtn = document.getElementById('close-name-modal-btn');
 const cancelNameBtn = document.getElementById('cancel-name-btn');
 
-// DOM Elements - Toast
-const toast = document.getElementById('toast');
-const toastMessage = document.getElementById('toast-message');
-let toastTimeout = null;
-
 /**
  * Initialize application
  */
@@ -442,22 +437,6 @@ function setupEventListeners() {
 }
 
 /**
- * Show a celebration toast notification
- */
-function showToast(message) {
-  if (toastTimeout) {
-    clearTimeout(toastTimeout);
-  }
-  toastMessage.textContent = message;
-  toast.hidden = false;
-
-  toastTimeout = setTimeout(() => {
-    toast.hidden = true;
-    toastTimeout = null;
-  }, 3500);
-}
-
-/**
  * Handle adding draft sub-task in Add Form
  */
 function handleAddDraftSubtask() {
@@ -529,10 +508,6 @@ function handleAddTask(e) {
   renderDraftSubtasks();
   taskInput.focus();
 
-  if (isAchieved) {
-    showToast('You crushed it. Well-done!');
-  }
-
   render();
 }
 
@@ -564,11 +539,6 @@ function toggleTaskAchieved(id) {
   if (task) {
     task.achieved = !task.achieved;
     saveTasks();
-
-    if (task.achieved) {
-      showToast('You crushed it. Well-done!');
-    }
-
     render();
   }
 }
@@ -720,11 +690,6 @@ function handleSaveEdit(e) {
     tasks[taskIndex].subtasks = [...editFormSubtasks];
 
     saveTasks();
-
-    if (!wasAchieved && updatedAchieved) {
-      showToast('You crushed it. Well-done!');
-    }
-
     render();
   }
 
